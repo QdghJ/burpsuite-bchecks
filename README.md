@@ -31,5 +31,9 @@ Burp Suite 是一款功能强大的应用程序安全测试工具，而 BCheck �
 
 ## 如何使用脚本
 
-要使用这些 BCheck 脚本，你需要首先安装 Burp Suite 2023.7.1 以及更新的版本。然后插件处导入bcheck脚本：
+要使用这些 BCheck 脚本，你需要首先安装 Burp Suite 2023.7.1 以及更新的版本。然后插件处导入 BCheck 脚本：
+
+## 许可证
+
+本项目采用 [Apache 许可证 2.0](LICENSE) 进行许可。
 
