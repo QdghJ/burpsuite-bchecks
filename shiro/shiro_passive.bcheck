@@ -9,7 +9,7 @@ given response then
     if "rememberMe=deleteMe" in {latest.response} then
         report issue:
             severity: info
-            confidence: firm
+            confidence: certain
             detail: "Shiro Vulnerability Detected: rememberMe=deleteMe"
             remediation: "Investigate and fix the Shiro vulnerability immediately."
     end if

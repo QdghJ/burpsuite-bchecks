@@ -18,7 +18,7 @@ given request then
     if "rememberMe=deleteMe" in {check.response} then
         report issue:
             severity: info
-            confidence: firm
+            confidence: certain
             detail: {issueDetail}
             remediation: {issueRemediation}
     end if
